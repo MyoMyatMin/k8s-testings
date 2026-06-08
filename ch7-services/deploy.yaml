@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svc-test
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      chapter: services
+  template:
+    metadata:
+      labels:
+        chapter: services
+    spec:
+      containers:
+        - image: nigelpoulton/k8sbook:1.0
+          name: hello-ctr
+          ports:
+            - containerPort: 8080
