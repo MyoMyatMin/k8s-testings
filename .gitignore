@@ -1,2 +1,5 @@
 *.pdf
 TKB/
+ch9-wasm/tkb-wasm/target/
+ch9-wasm/.spin/
+ch9-wasm/crt.pem
